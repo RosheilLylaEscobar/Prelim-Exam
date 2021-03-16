@@ -2,13 +2,19 @@ package escobar_PrelimExam;
 
 public class student {
 
-	public int IDN, CHours, GPoint;
+	private int IDN, CHours, GPoint;
+	private double gpa;
 	
-
+	public student() {
+	   }
+	
 	   public student(int ID, int Hours, int Point) {
+		   super();
 	       IDN = ID;
 	       CHours = Hours;
 	       GPoint = Point;
+	       calculateGradePoint();
+	       
 	   }
 
 	   public int getIDN() {
@@ -33,6 +39,17 @@ public class student {
 
 	   public void setGPoints(int Point) {
 	       GPoint = Point;
+	   }
+	   
+	   @Override
+	   public String toString() {
+	       return "ID : " + IDN + " NumberOfCredits : " + CHours + " Points : " + GPoint + " Grade Point : "
+	               + gpa;
+	   }
+
+
+	   public void calculateGradePoint() {
+	       gpa = GPoint / (double) CHours;
 	   }
 }
 
