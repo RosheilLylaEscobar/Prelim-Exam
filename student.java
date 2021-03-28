@@ -3,7 +3,7 @@ package escobar_PrelimExam;
 public class student {
 
 	private int IDN, CHours, GPoint;
-	private double gpa;
+	private double grade;
 	
 	public student() {
 	   }
@@ -44,12 +44,12 @@ public class student {
 	   @Override
 	   public String toString() {
 	       return "ID : " + IDN + " NumberOfCredits : " + CHours + " Points : " + GPoint + " Grade Point : "
-	               + gpa;
+	               + grade;
 	   }
 
 
 	   public void calculateGradePoint() {
-	       gpa = GPoint / (double) CHours;
+	       grade = GPoint / (double) CHours;
 	   }
 }
 
